@@ -11,7 +11,8 @@ export function LogIn(){
     // let StringData = JSON.stringify(info)
     // let res  = await axios.get(`http://localhost:3001/getUser/${StringData}`)
     // console.log(res)
-    console.log(info)
+    // console.log(info)l
+    window.location.href = "/admin"
   }
 
     return (
