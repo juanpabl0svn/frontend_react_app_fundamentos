@@ -17,7 +17,6 @@ export function NewPassword(){
             <a href="/"><button className="back">Volver</button></a>
             <button className="send">Solicitar</button>
         </div>
-        
     </div>
     );
 }

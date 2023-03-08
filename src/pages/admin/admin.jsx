@@ -1,19 +1,23 @@
 import "../../css/admin.css";
-import {Some} from "./user_icon"
+// import {useState} from "react";
+import Cookies from "universal-cookie"
+import Bar from "../bar.jsx"
+
+
+const cookie = new Cookies()
+
 
 export function HomePageAdmin(){
-    return (
-        <div className="principal">
-            <header>
-                <nav>
-                    <a href="/admin"><button id="control_center">Organigrama</button></a>
-                    <a href="/admin"><button id="control_center">Actividades</button></a>
-                    <a href="/admin"><button id="control_center">Usuarios</button></a>
-                    <Some name={"juan"}/>    
-                </nav>
-            </header>
-            
+    console.log(cookie.get('username'))
 
-        </div>
-    )
+
+    if (!cookie.get('username')){
+        window.location.href = "/"
+    }
+    return (<h1>
+        <Bar rol={cookie.get("rol")}/>
+        Bienvenidio {cookie.get("username")}
+    </h1>)
+        
+    
 }

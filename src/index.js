@@ -14,13 +14,14 @@ const router = createBrowserRouter([
   ,
   {
     path: "/olvidar_contraseña",
-    element: <NewPassword/>
+    element: <NewPassword/>,
+    errorElement: <h1>Error</h1>
   },
   {
     path: "/admin",
-    element: <HomePageAdmin/>
+    element: <HomePageAdmin/>,
+    errorElement: <h1>Error</h1>
   }
-
 ]);
 
 
